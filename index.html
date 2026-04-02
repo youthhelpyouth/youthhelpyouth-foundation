@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouthHelpYouth | Changing the Future Today</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background-color: #2563eb;
+            background-image: radial-gradient(at 0% 0%, rgba(30, 64, 175, 1) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, rgba(37, 99, 235, 1) 0, transparent 50%);
+        }
+        .hidden-view { display: none; }
+        .card-shadow { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        .motto-text { letter-spacing: 0.2em; }
+        .progress-glow { box-shadow: 0 0 15px rgba(37, 99, 235, 0.3); }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="flex justify-between items-center px-6 py-5 max-w-7xl mx-auto">
+            <button onclick="showView('home')" class="flex items-center gap-2 hover:opacity-80 transition focus:outline-none">
+                <div class="bg-blue-600 text-white px-2 py-1 rounded font-black text-xl">YHY</div>
+                <span class="text-xl font-black tracking-tighter uppercase text-slate-900">YouthHelpYouth</span>
+            </button>
+            
+            <div class="hidden md:flex gap-8 items-center">
+                <button onclick="showView('home')" class="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">About Us</button>
+                <button onclick="showView('relief')" class="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">Hurricane Relief</button>
+                <button onclick="showView('scholarship')" class="text-xs font-black uppercase tracking-widest text-slate-500 hover:text-blue-600 transition">Scholarship Fund</button>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contactyouthhelpyouth@gmail.com&su=Inquiry%20from%20Website" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:bg-blue-700 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- VIEW 1: HOME PAGE -->
+    <main id="view-home">
+        <header class="hero-bg text-white py-24 md:py-32 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="motto-text text-blue-200 font-black uppercase text-sm mb-4">Motto: Building Tomorrow, Today.</p>
+                <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter italic uppercase">
+                    CHANGING THE <br/><span class="text-blue-200">FUTURE TODAY.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">
+                    A youth-led Jamaican foundation proving that young people have the power to lead, serve, and rebuild our communities right now.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="showView('relief')" class="bg-white text-blue-700 px-10 py-4 rounded-xl font-black text-lg hover:scale-105 transition shadow-lg">
+                        OUR RELIEF MISSION
+                    </button>
+                    <button onclick="showView('scholarship')" class="border-2 border-white text-white px-10 py-4 rounded-xl font-black text-lg hover:bg-white/10 transition">
+                        THE SCHOLAR FUND
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-24 px-6 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="p-10 bg-slate-50 rounded-[3rem] border border-slate-100">
+                    <span class="text-blue-600 font-black uppercase tracking-widest text-xs">Our Vision</span>
+                    <h2 class="text-4xl font-black mt-4 mb-6 tracking-tighter uppercase">Changing the Future Today.</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        We envision a Jamaica where youth are the catalysts for immediate progress. We don't wait for the future; we build the resources and confidence needed to lead our nation starting right now.
+                    </p>
+                </div>
+                <div class="p-10 bg-blue-600 text-white rounded-[3rem] shadow-xl">
+                    <span class="text-blue-200 font-black uppercase tracking-widest text-xs">Our Mission</span>
+                    <h2 class="text-4xl font-black mt-4 mb-6 tracking-tighter uppercase">Serve, Lead, Rebuild.</h2>
+                    <p class="text-blue-50 text-lg leading-relaxed">
+                        To empower Jamaican youth to take direct action in their communities through structured disaster relief, academic excellence, and leadership training.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- VIEW 2: HURRICANE RELIEF -->
+    <main id="view-relief" class="hidden-view bg-slate-50 min-h-screen">
+        <section class="py-16 px-6 max-w-6xl mx-auto">
+            <button onclick="showView('home')" class="text-blue-600 font-bold mb-8 flex items-center gap-2 hover:underline">
+                ← Back to About Us
+            </button>
+
+            <div class="bg-white p-8 md:p-16 rounded-[3rem] border border-slate-100 card-shadow mb-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl md:text-6xl font-black tracking-tighter uppercase text-slate-900 italic">Hurricane Relief</h2>
+                    <p class="text-slate-500 mt-4 text-lg max-w-2xl mx-auto">Providing 7-Day Relief Bags to families in Westmoreland, St. James, and Hanover.</p>
+                </div>
+
+                <!-- Progress Tracker -->
+                <div class="max-w-3xl mx-auto bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 mb-16">
+                    <div class="flex justify-between items-end mb-4 px-2">
+                        <div>
+                            <span class="text-4xl font-black text-blue-600 tracking-tighter">45</span>
+                            <span class="text-slate-400 font-bold uppercase text-xs tracking-widest ml-1">/ 100 Bags Ready</span>
+                        </div>
+                        <span class="text-blue-600 font-black text-sm bg-blue-50 px-3 py-1 rounded-full progress-glow">45% Complete</span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-8 rounded-full overflow-hidden p-1">
+                        <div class="bg-blue-600 h-full rounded-full transition-all duration-1000 ease-out" style="width: 45%"></div>
+                    </div>
+                    <p class="text-[10px] uppercase font-black text-slate-400 mt-6 tracking-[0.3em] text-center">Live logistics update</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🥫</div>
+                        <h4 class="font-black uppercase text-sm mb-4 text-slate-900 tracking-tighter">Food Essentials</h4>
+                        <ul class="text-slate-500 text-xs space-y-3 font-medium">
+                            <li>• Canned Sardines / Beef</li>
+                            <li>• 1lb & 2lb Bags of Rice</li>
+                            <li>• Crackers & Flour</li>
+                            <li>• Bottled Water</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🧼</div>
+                        <h4 class="font-black uppercase text-sm mb-4 text-slate-900 tracking-tighter">Hygiene Kits</h4>
+                        <ul class="text-slate-500 text-xs space-y-3 font-medium">
+                            <li>• Bath Soap & Toothpaste</li>
+                            <li>• Sanitary Napkins</li>
+                            <li>• Toilet Paper</li>
+                            <li>• Hand Sanitizer</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
+                        <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🩹</div>
+                        <h4 class="font-black uppercase text-sm mb-4 text-slate-900 tracking-tighter">First Aid & Misc</h4>
+                        <ul class="text-slate-500 text-xs space-y-3 font-medium">
+                            <li>• Bandages & Antiseptic</li>
+                            <li>• Matches & Candles</li>
+                            <li>• Batteries (AA/AAA)</li>
+                            <li>• Flashlights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center border-t border-slate-100 pt-12">
+                    <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-4 text-slate-900">Ready to Drop Off?</h3>
+                    <p class="text-slate-500 text-sm mb-8">Click below to open Gmail and coordinate with our team.</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contactyouthhelpyouth@gmail.com&su=Relief%20Item%20Donation&body=Hi%20Team,%20I%20have%20items%20ready%20to%20donate..." target="_blank" class="inline-block bg-blue-600 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-blue-700 transition shadow-xl">
+                        Open Gmail to Schedule
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- VIEW 3: SCHOLARSHIP FUND -->
+    <main id="view-scholarship" class="hidden-view bg-slate-50 min-h-screen">
+        <section class="py-16 px-6 max-w-6xl mx-auto">
+            <button onclick="showView('home')" class="text-blue-600 font-bold mb-8 flex items-center gap-2 hover:underline">
+                ← Back to About Us
+            </button>
+
+            <div class="bg-blue-600 p-8 md:p-16 rounded-[3rem] text-white card-shadow mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-blue-200 font-black uppercase tracking-[0.3em] text-xs">Rewarding Excellence</span>
+                        <h2 class="text-5xl font-black mt-4 tracking-tighter uppercase leading-none italic">Scholar <br/>Fund 2026</h2>
+                        <p class="mt-6 text-blue-100 text-lg leading-relaxed">Providing academic grants to students across Jamaica who maintain an <strong>80% average or higher</strong> while navigating financial hardship.</p>
+                        <div class="mt-8 flex gap-4">
+                            <div class="bg-blue-500/30 p-4 rounded-2xl border border-white/10">
+                                <span class="block text-2xl font-black">80%+</span>
+                                <span class="text-[10px] uppercase font-bold text-blue-100">Avg Required</span>
+                            </div>
+                            <div class="bg-blue-500/30 p-4 rounded-2xl border border-white/10">
+                                <span class="block text-2xl font-black">Islandwide</span>
+                                <span class="text-[10px] uppercase font-bold text-blue-100">Open to All</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white text-slate-900 p-8 md:p-10 rounded-[2.5rem]">
+                        <h3 class="text-2xl font-black mb-2 uppercase tracking-tighter">Support a Scholar</h3>
+                        <p class="text-slate-500 text-sm mb-6 leading-relaxed">Help us reach our $500,000 JMD goal to ensure high-achieving students can focus on their studies without the burden of financial stress.</p>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contactyouthhelpyouth@gmail.com&su=Scholarship%20Fund%20Donation&body=I%20would%20like%20to%20support%20high-achieving%20students%20through%20the%20Scholar%20Fund.%20Please%20send%20details." target="_blank" class="block w-full bg-blue-600 text-white text-center py-5 rounded-xl font-black uppercase tracking-widest text-sm hover:bg-blue-700 transition shadow-lg">
+                            DONATE VIA GMAIL
+                        </a>
+                        <p class="text-center mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">Empowering Jamaican Excellence</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-10 rounded-[3rem] border border-slate-100">
+                <h3 class="text-xl font-black uppercase tracking-tighter mb-6">Eligibility Criteria</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="flex gap-4">
+                        <div class="text-blue-600 text-xl font-bold">01</div>
+                        <div>
+                            <h4 class="font-black uppercase text-xs tracking-widest mb-1">Academic Standard</h4>
+                            <p class="text-slate-500 text-sm">Must maintain a minimum cumulative average of 80% or equivalent in the current school year.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-blue-600 text-xl font-bold">02</div>
+                        <div>
+                            <h4 class="font-black uppercase text-xs tracking-widest mb-1">Financial Need</h4>
+                            <p class="text-slate-500 text-sm">Must demonstrate financial hardship that impacts the ability to cover school fees, books, or transport.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 px-6 text-center border-t border-slate-100 bg-white">
+        <div class="text-slate-400 text-[10px] font-black uppercase tracking-[0.4em]">
+            Building Tomorrow, Today • YouthHelpYouth Jamaica
+        </div>
+    </footer>
+
+    <script>
+        function showView(viewName) {
+            document.getElementById('view-home').classList.add('hidden-view');
+            document.getElementById('view-relief').classList.add('hidden-view');
+            document.getElementById('view-scholarship').classList.add('hidden-view');
+            document.getElementById('view-' + viewName).classList.remove('hidden-view');
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
